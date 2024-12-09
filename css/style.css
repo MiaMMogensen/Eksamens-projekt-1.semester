@@ -1,0 +1,1042 @@
+html {
+    font-size: 16px;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #041350;
+}
+
+/* Fonts */
+@font-face {
+    font-family: "Montserrat-Medium";
+    src: url(/fonts/Montserrat-Medium.ttf);
+}
+
+@font-face {
+    font-family: "OpenSans-Regular";
+    src: url(/fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url(/fonts/Montserrat-Regular.ttf);
+}
+
+/* Styling af header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #041350;
+    color: white;
+    padding: 20px 20px;
+}
+
+/* styling af logo */
+.logo img {
+    height: 35px;
+    width: auto;
+}
+
+/* styling af navigationg og burgermenu */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.burger-toggle {
+    display: none;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    background-color: #041350;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.menu li {
+    margin: 0;
+    list-style-type: none;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    font-size: 1.5rem;
+    font-family: 'Montserrat-Medium', Arial, Helvetica, sans-serif;
+}
+
+.menu ul {
+    padding: 0;
+}
+
+.burger-menu {
+    display: block;
+    cursor: pointer;
+}
+
+.burger-menu .line {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    display: block;
+}
+
+.burger-toggle:checked + .burger-menu + .menu {
+    display: flex;
+    z-index: 1;
+}
+
+.dropdown-content {
+    display: none;
+}
+
+/* styling af forside */
+.hero {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+.hero-billede img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.hero-billede-desktop img {
+    display: none;
+}
+
+.hero-text {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-text h1 {
+    font-family: 'Montserrat-Regular', Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: clamp(3rem, 10vw, 5rem); /* clamp bruges så teksten bliver større hvis skærmen bliver større */
+}
+
+/* koncerter */
+.hero-koncerter {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+.hero-billede-koncerter img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.hero-billede-koncerter-desktop img {
+    display: none;
+}
+
+.hero-koncerter-tekst {
+    position: absolute;
+    top: 9%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-koncerter .cta-button {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45%;
+    height: auto;
+}
+
+.hero-koncerter h1 {
+    font-family: 'Montserrat-Regular', Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.hero-koncerter h2 {
+    font-family: 'Montserrat-Regular', Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 3rem;
+    margin-top: 1rem;
+}
+
+.hero-koncerter .cta-button {
+    width: 150px;
+    margin-top: 2.5rem;
+}
+
+/* nedtælling på koncert side */
+.countdown {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdown p {
+    color: white;
+    font-family: 'Montserrat-Regular', Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+}
+
+.box {
+    background-color: #a5a5a561;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.box h1 {
+    font-size: 2rem;
+    margin: 0;
+    font-family: 'Montserrat-Regular', Arial, Helvetica, sans-serif;
+}
+
+.label {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* event liste */
+.koncert-container {
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .filter-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .koncert-container input[type="text"],
+  select {
+    flex: 1;
+    padding: 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'OpenSans-Regular', Arial, Helvetica, sans-serif;
+  }
+
+  .events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .event {
+    display: flex;
+    background: #0d1b6b;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .event-date {
+    background: #01164a;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    flex: 1;
+  }
+
+  .event-details {
+    padding: 15px;
+    gap: 10px;
+  }
+  
+  .event img {
+    width: 150px;
+  }
+  
+  button {
+    background: #ff4081;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  button:hover {
+    background: #ff689f;
+  }
+
+/* styling af billeder */
+.koncert-billede {
+    width: 80%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: inline-block;
+}
+
+#margin-bottom {
+    margin-bottom: 2rem;
+}
+
+.grid-container {
+    text-align: center;
+}
+
+.ticket img {
+    width: 80%;
+    height: auto;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    justify-self: center;
+    display: block;
+    justify-content: center;
+}
+
+.arbejdsbillede {
+    display: none;
+}
+
+/* styling af tekst */
+.mobil-text h2 {
+    color: white;
+    font-family: 'Montserrat-Regular', Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.mobil-text h3 {
+    color: white;
+    font-family: 'Montserrat-Regular', Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.mobil-text h4 {
+    color: white;
+    font-family: 'Montserrat-Regular', Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+}
+
+#margin-1 {
+    margin: 1rem;
+    font-size: 2.2rem;
+}
+
+.mobil-text p {
+    color: white;
+    font-family: 'OpenSans-Regular', Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0 2.3rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.hero-text-2 h2 {
+    font-family: 'Montserrat-Regular', Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 1.7rem;
+}
+
+.hero-text-2 h3 {
+    font-family: 'Montserrat-Regular', Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 2.5rem;
+    margin-top: 1rem;
+}
+
+#event-overskrift {
+    font-size: 2.5rem;
+    margin-top: 4.5rem;
+}
+
+.hero-text-2 {
+    position: absolute;
+    top: 6%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-text-2 p {
+    color: white;
+    font-family: 'OpenSans-Regular', Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0 1.2rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+#ryk-ned {
+    margin-top: 11rem; 
+}
+
+.text-placering h1 {
+    margin-top: 0;
+}
+
+.text-placering .cta-button {
+    margin-top: 1rem;
+}
+
+.desktop-text {
+    display: none;
+}
+
+.gradient p {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.gradient h3 {
+    padding-top: 3rem;
+    margin-top: 0;
+}
+
+.gradient {
+    background: linear-gradient(to bottom, #13177D, #041350);
+    text-align: center;
+}
+
+.gradient .koncert-billede {
+    margin-bottom: 0;
+}
+
+.arbejdsopgaver-desktop {
+    display: none;
+}
+
+
+/* call to action knapper */
+
+.cta-button {
+    padding: 15px;
+    background-color: #FD0BB6;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 15px;
+    font-family: 'Montserrat-Medium', Arial, Helvetica, sans-serif;
+    box-shadow: 3px 3px 3px white;
+    text-decoration: none;
+    display: block;
+}
+
+.hero .cta-button {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45%;
+    height: auto;
+}
+
+#cta1 {
+   width: 70%;
+   display: inline-block;
+   text-align: center;
+   margin-bottom: 3rem;
+}
+
+#cta2 {
+    width: 30%;
+    margin-top: 4rem;
+}
+
+#cta3 {
+    width: 280px;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+#cta4 {
+    width: 230px;
+    margin-top: 3.5rem;
+}
+
+#cta6 {
+    width: 250px;
+    display: inline-block;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* konkurrence kort */
+.konkurrence-kort {
+    background: url('/img/kort.png');
+    background-size: cover;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 3rem;
+    display: block;
+}
+
+.konkurrence-kort h1 {
+    color: white;
+    font-family: 'Montserrat-Regular', Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.konkurrence-kort p {
+    color: white;
+    font-family: 'OpenSans-Regular', Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0 2.3rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.konkurrence-kort .cta-button {
+    width: 100px;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+/* formular */
+.form-container {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    width: 100%;
+    margin: 50px auto;
+}
+
+h6 {
+    font-family: 'Montserrat-Regular', Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: 'OpenSans-Regular', Arial, Helvetica, sans-serif;
+}
+
+select {
+    width: 31%;
+    padding: 13px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: 'OpenSans-Regular', Arial, Helvetica, sans-serif;
+    color: #8b8282db;
+}
+
+#quantity {
+    width: 67%;
+}
+
+.form-container p {
+    font-family: 'OpenSans-Regular', Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+}
+
+.form-checkliste {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+label {
+    padding-left: 1rem;
+    font-family: 'OpenSans-Regular', Arial, Helvetica, sans-serif;
+    margin-left: 10px;
+}
+
+button {
+    background-color: #FD0BB6;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'OpenSans-Regular', Arial, Helvetica, sans-serif;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+input[type="text" i] {
+    padding-block: 15px;
+    padding-inline: 15px;
+    margin: 18px 0;
+}
+
+/* styling af footer */
+.footer p {
+    font-family: 'Montserrat-Regular', Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 0.2rem;
+}
+
+.footer {
+    margin: 2rem 0 1rem 1rem;
+}
+
+.ikoner img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.hvid-border {
+    border-top: 1px solid white;
+    margin-top: 3rem;
+}
+
+
+/* media quaries */
+
+/* tablet */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .cta-button {
+        font-size: 2rem;
+    }
+
+    .mobil-text h2 {
+        font-size: 3rem;
+    }
+ 
+    .mobil-text p {
+        font-size: 1.5rem;
+    }
+
+    .hero-text-2 h2 {
+        font-size: 3rem;
+    }
+    
+    .hero-text-2 p {
+        font-size: 1.5rem;
+    }
+
+    .footer p {
+        font-size: 1.5rem;
+        margin-left: 1rem;
+    }
+
+    .ticket img {
+        top: 35%;
+    }
+
+    .ikoner img {
+        margin-left: 1rem;
+        width: 60px;
+    }
+
+    .menu li a {
+        font-size: 2rem;
+    }
+
+    #event-overskrift {
+        font-size: 4.5rem;
+        margin-top: 10rem;
+    }
+
+    .mobil-text h3 {
+        font-size: 4.5rem;
+    }
+
+    .hero-text-2 h3 {
+        font-size: 4.5rem;
+    }
+
+    .form-container {
+        max-width: 500px;
+    }
+
+}
+
+/* desktop */
+
+@media (min-width: 1025px) {
+
+    .burger-menu {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        position: static;
+    }
+
+    .logo img {
+        height: 50px;
+        width: auto;
+        margin-left: 1.5rem;
+    }
+
+    .menu {
+        padding: 0;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        min-width: 100px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        background-color: #041350;
+    }
+    
+      .dropdown-content a:hover {
+        background-color: #202175;
+      }
+    
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .hero-billede img {
+        display: none;
+    }
+    
+    .hero-billede-desktop img {
+        display: block;
+    }
+
+    .hero-text h1 {
+        font-size: 7rem;
+        justify-self: start;
+        margin-left: 10%;
+        text-align: start;
+    }
+
+    .cta-button {
+        font-size: 2.5rem;
+    }
+
+    .hero .cta-button {
+        top: 55%;
+        width: 23rem;
+        height: auto;
+        transform: translate(0, 0);
+        position: absolute;
+        left: 10%;
+    }
+
+    .mobil-text h2 {
+        font-size: 5rem;
+    }
+
+    .hero-text-2 h2 {
+        font-size: 5rem;
+        margin-top: 1rem;
+    }
+
+    .mobil-text p {
+        font-size: 1.8rem;
+        margin-left: 10%;
+        margin-top: 1.5rem;
+    }
+
+    .hero-text-2 p {
+        font-size: 1.8rem;
+    }
+
+    .desktop-text {
+        display: block;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "content image";
+    }
+
+    .content {
+        grid-area: content;
+        justify-self: center;
+    }
+
+    .gradient .content p {
+        margin-top: 4rem;
+    }
+
+    .gradient h3 {
+        margin-bottom: 3rem;
+    }
+
+    .image {
+        grid-area: image;
+    }
+
+    .grid-container-omvendt {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "image-2 content-2";
+    }
+
+    .content-2 {
+        grid-area: content-2;
+        justify-self: center;
+    }
+
+    #cta6 {
+        width: 400px;
+        margin-top: 50rem;
+    }
+
+    .image-2 {
+        grid-area: image-2;
+    }
+
+    #cta1 {
+        margin-top: 22rem;
+        width: 500px;
+    }
+
+    .koncert-billede {
+        width: 600px;
+        margin-top: 0;
+    }
+
+    .ticket img {
+        width: 700px;
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #ticket-mobil img {
+        width: 520px;
+        margin-top: -3rem;
+    }
+
+    #cta2 {
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+    }
+    
+    .footer-grid-container {
+        display: grid;
+        margin-bottom: 1rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "footer-content footer-ikoner";
+    }
+
+    .footer-content {
+        grid-area: footer-content;
+    }
+
+    .footer-ikoner {
+        grid-area: footer-ikoner;
+        justify-self: end;
+        margin-right: 1rem;
+        margin-top: 2rem;
+    }
+
+    #event-overskrift {
+        font-size: 5rem;
+        margin-top: 13rem;
+    }
+
+    .mobil-text h3 {
+        font-size: 4rem;
+        margin-top: 0;
+    }
+
+    #mobil-text-væk {
+        display: none;
+    }
+
+    #cta3 {
+        margin-top: 14rem;
+        width: 400px;
+    }
+
+    #container-margin {
+        margin-top: 5rem;
+        margin-bottom: 4rem;
+    }
+
+    .hero-text-2 h3 {
+        font-size: 4rem;
+        margin: 0 0 1rem 0;
+    }
+
+    #cta4 {
+        width: 450px;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #cta5 {
+        width: 350px;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #ryk-ned-2 {
+        margin-top: 5rem;
+    }
+
+    .menu li a.active {
+        border-bottom: 2px solid white;
+    }
+    
+    .menu li a:hover {
+        border-bottom: 2px solid white;
+    }
+
+    .mobil-text h4 {
+        font-size: 3rem;
+    }
+
+    .arbejdsopgaver-mobil {
+        display: none;
+    }
+
+    .arbejdsopgaver-desktop {
+        display: block;
+    }
+
+    .arbejdsopgaver-desktop .hero-text-2 {
+        margin-top: 5rem;
+    }
+
+    .arbejdsbillede {
+        width: 600px;
+        display: block;
+        margin-top: 3rem;
+        margin-left: 5rem;
+    }
+
+    .form-container {
+        max-width: 800px;
+    }
+
+    .konkurrence-kort {
+        width: 500px;
+        height: 480px;
+    }
+
+    .konkurrence-kort h1 {
+        margin-top: 3rem;
+    }
+    
+    .konkurrence-kort p {
+        font-size: 1.5rem;
+    }
+    
+    .konkurrence-kort .cta-button {
+        width: 225px;
+        margin-top: 3rem;
+    }
+
+    #ryk-tekst-ned {
+        margin-top: 12rem;
+    }
+
+    #ryk-tekst-ned-2{
+        margin-top: 3rem;
+    }
+
+    .konkurrence-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "kort-1 kort-2";
+    }
+
+    .kort-1 {
+        grid-area: kort-1;
+        justify-self: center;
+    }
+
+    .kort-2 {
+        grid-area: kort-2;
+        justify-self: center;
+    }
+
+}

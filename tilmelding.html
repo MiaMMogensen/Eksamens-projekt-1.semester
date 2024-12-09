@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radar - Tilmelding</title>
+    <meta name="description" content="side hvor du kan melde dig ind som frivillig">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+
+<body>
+
+    <!-- Header med navigation -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="billede af logo">
+            </a>
+        </div>
+
+        <nav class="navbar">
+            <input type="checkbox" id="burger-toggle" class="burger-toggle">
+            <label for="burger-toggle" class="burger-menu">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </label>
+
+            <ul class="menu">
+                <li class="dropdown"><a href="blivfrivillig.html">Bliv Frivillig</a>
+                    <ul class="dropdown-content">
+                        <li><a href="arbejdsopgaver.html">Arbejdsopgaver</a></li>
+                        <li><a href="tilmelding.html">Tilmelding</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="events.html">Events</a>
+                    <ul class="dropdown-content">
+                        <li><a href="koncerter.html">Koncerter</a></li>
+                        <li><a href="konkurrencer.html">Konkurrencer</a></li>
+                    </ul>
+                </li>
+                <li><a href="deloplevelser.html">Del dine oplevelser</a></li>
+                <li><a href="omradar.html">Om Radar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="gradient">
+        <div class="mobil-text">
+            <h3 id="margin-1">Kunne du tænke dig at blive frivillig?
+                <br> Meld dig ind her</h3>
+            <p>Hvis det at være frivillig og være med til at gøre en forskel lyder som noget for dig, så er du mere end
+                velkommen til at melde dig til herunder.</p>
+        </div>
+    </div>
+
+    <section class="form-container">
+        <h6>Meld dig som frivillig og støt Radar</h6>
+        <form>
+            <input type="text" id="name" name="name" placeholder="Fornavn" required>
+            <input type="text" id="name" name="name" placeholder="Efternavn" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <select id="land" name="land">
+                <option value="danmark">+45</option>
+                <option value="tyskland">+49</option>
+                <option value="england">+44</option>
+            </select>
+            <input type="number" id="quantity" name="quantity" placeholder="Telefonnummer">
+            <p>Hvilket arbejdsområde er du interesseret i:</p>
+            <div class="form-checkliste">
+                <div class="form-checkbox">
+                    <input type="checkbox" id="opgave1" name="opgave1" value="Bar/dør">
+                </div>
+                <div class="form-content">
+                    <label for="opgave1">Bar/dør</label>
+                </div>
+            </div>
+            <div class="form-checkliste">
+                <div class="form-checkbox">
+                    <input type="checkbox" id="opgave2" name="opgave2" value="Lys">
+                </div>
+                <div class="form-content">
+                    <label for="opgave2">Lys</label>
+                </div>
+            </div>
+            <div class="form-checkliste">
+                <div class="form-checkbox">
+                    <input type="checkbox" id="opgave3" name="opgave3" value="Foto">
+                </div>
+                <div class="form-content">
+                    <label for="opgave3">Foto</label>
+                </div>
+            </div>
+            <div class="form-checkliste">
+                <div class="form-checkbox">
+                    <input type="checkbox" id="opgave4" name="opgave4" value="Afvikling">
+                </div>
+                <div class="form-content">
+                    <label for="opgave4">Afvikling</label>
+                </div>
+            </div>
+
+            <button type="submit">Tilmeld</button>
+        </form>
+    </section>
+
+    <!-- Footer med information og sociale medier ikoner -->
+
+    <footer>
+        <div class="footer-grid-container">
+            <div class="footer-content">
+                <div class="footer">
+                    <p>Radar</p>
+                    <p>Karen Wegeners Gade 6</p>
+                    <p>DK 8000 Aarhus C</p>
+                </div>
+            </div>
+            <div class="footer-ikoner">
+                <div class="ikoner">
+                    <a href="https://www.facebook.com/radarlive" target="_blank"><img src="img/facebook.png"
+                            alt="facebook logo"></a>
+                    <a href="https://www.youtube.com/user/radarliverec" target="_blank"><img src="img/youtube.png"
+                            alt="youtube logo"></a>
+                    <a href="https://www.instagram.com/radarlive/" target="_blank"><img src="img/instagram.png"
+                            alt="instagram logo"></a>
+                    <a href="https://open.spotify.com/user/radarlive" target="_blank"><img src="img/spotify.png"
+                            alt="spotify logo"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
