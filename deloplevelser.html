@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radar - Events</title>
-    <meta name="description" content="eventside med introduktion til de 2 undersider om koncerter og konkurrencer">
+    <title>Radar - Del dine oplevelser</title>
+    <meta name="description" content="side hvor du kan dele dine billeder fra Radars koncerter">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
@@ -35,7 +35,7 @@
                         <li><a href="tilmelding.html">Tilmelding</a></li>
                     </ul>
                 </li>
-                <li class="dropdown"><a href="events.html" class="active">Events</a>
+                <li class="dropdown"><a href="events.html">Events</a>
                     <ul class="dropdown-content">
                         <li><a href="koncerter.html">Koncerter</a></li>
                         <li><a href="konkurrencer.html">Konkurrencer</a></li>
@@ -51,60 +51,73 @@
 
     <div class="hero">
         <div class="hero-billede">
-            <img src="img/eb1mobil.png" alt="farverigt baggrundsbillede">
+            <img src="img/delb1mobil.png" alt="farverigt baggrundsbillede">
         </div>
         <div class="hero-billede-desktop">
-            <img src="/img/eb1desktop.png" alt="farverigt baggrundsbillede">
+            <img src="/img/delb1desktop.png" alt="farverigt baggrundsbillede">
         </div>
         <div class="hero-text-2">
-            <h2 id="event-overskrift">Oplev musikken <br> - og deltag i konkurrencer</h2>
-            <p id="mobil-text-væk">Find din næste koncert eller deltag i konkurrencer om billetter. Rul ned og udforsk
-                mulighederne!</p>
-            <p class="desktop-text">Hos Radar har du mulighed for at opleve unikke koncerter og deltage i spændende
-                konkurrencer. Find din næste koncert eller deltag i konkurrencer om billetter. <br> Rul ned og udforsk
-                mulighederne!</p>
+            <h3 id="overskrift-rykned">Del din glæde for musikken</h3>
+            <p>Radar handler om mere end bare musik - det handler om fællesskab og historier, der skabes og deles</p>
+            <div>
+                <a href="#sektion1" class="cta-button" id="cta7">Del dine billeder her</a>
+            </div>
         </div>
     </div>
 
-    <!-- Midtersektion -->
+    <div class="mobil-text" id="margin-top">
+        <h3>Del dine minder <br> fra Radars koncerter</h3>
+        <p>Musik er noget vi oplever sammen, og vi har lavet denne side, så du kan dele dine koncertoplevelser med
+            andre, og blive en del af Radar fællesskabet.</p>
+        <h3>Delte billeder</h3>
+    </div>
 
-    <section class="mobil-text">
-        <div class="grid-container" id="container-margin">
-            <div class="content">
-                <h3>Koncerter</h3>
-                <p>Find kommende koncerter, oplev nye bands og få nogle fantastiske aftener!</p>
-            </div>
-            <div class="image">
-                <img src="img/eb2mobil.png" alt="billede af en koncert" class="koncert-billede">
-            </div>
-            <div class="content">
-                <a href="koncerter.html" class="cta-button" id="cta3">Se kommende koncerter</a>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Nederste sektion -->
-
-    <div class="hero">
-        <div class="hero-billede">
-            <img src="img/eb3mobil.png" alt="farverigt baggrundsbillede">
-        </div>
-        <div class="hero-billede-desktop">
-            <img src="/img/eb3desktop.png" alt="farverigt baggrundsbillede">
-        </div>
-        <div class="hero-text-2">
-            <h3>Konkurrencer</h3>
-            <p>Deltag i spændende konkurrencer og vind billetter til unikke oplevelser!</p>
-        </div>
-        <div class="ticket" id="ticket-mobil">
-            <img src="img/eb4mobil.png" alt="billede af en koncert">
+    <div class="gallery">
+        <div class="image-container">
+            <img src="/img/del1.png" alt="billede fra en koncert">
+            <img src="/img/del2.png" alt="billede fra en koncert">
+            <img src="/img/del3.png" alt="billede fra en koncert">
+            <img src="/img/del4.png" alt="billede fra en koncert" class="billede-væk">
+            <img src="/img/del5.png" alt="billede fra en koncert" class="billede-væk">
+            <img src="/img/del6.png" alt="billede fra en koncert">
+            <img src="/img/del7.png" alt="billede fra en koncert">
+            <img src="/img/del8.png" alt="billede fra en koncert">
         </div>
         <div>
-            <a href="konkurrencer.html" class="cta-button" id="cta4">Deltag i konkurrencer</a>
+            <p>⬇</p>
         </div>
     </div>
+
+    <div class="gallery-desktop">
+        <div class="række1">
+            <img src="/img/del1.png" alt="billede fra en koncert">
+            <img src="/img/del2.png" alt="billede fra en koncert">
+            <img src="/img/del3.png" alt="billede fra en koncert">
+        </div>
+        <div class="større">
+            <img src="/img/del4.png" alt="billede fra en koncert">
+            <img src="/img/del5.png" alt="billede fra en koncert">
+        </div>
+        <div class="række3">
+            <img src="/img/del6.png" alt="billede fra en koncert">
+            <img src="/img/del7.png" alt="billede fra en koncert">
+            <img src="/img/del8.png" alt="billede fra en koncert">
+        </div>
+    </div>
+
+    <div class="mobil-text" id="sektion1">
+        <h3>Del dine billeder med os</h3>
+        <p>Upload dit billede her, og del dine koncertminder med alle os i Radar fællesskabet</p>
+    </div>
+
+    <div class="upload-container">
+        <label for="file-upload" class="upload-label">
+            Træk eller upload dit billede her
+            <div class="upload-icon">
+                <img src="img/uploadicon.png" alt="upload ikon">
+            </div>
+        </label>
+        <input type="file" id="file-upload" accept="image/*" />
     </div>
 
     <!-- Footer med information og sociale medier ikoner -->

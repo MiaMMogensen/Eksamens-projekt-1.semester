@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radar - Events</title>
-    <meta name="description" content="eventside med introduktion til de 2 undersider om koncerter og konkurrencer">
+    <title>Radar - Deltag</title>
+    <meta name="description" content="forside med introduktion">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
@@ -35,7 +35,7 @@
                         <li><a href="tilmelding.html">Tilmelding</a></li>
                     </ul>
                 </li>
-                <li class="dropdown"><a href="events.html" class="active">Events</a>
+                <li class="dropdown"><a href="events.html">Events</a>
                     <ul class="dropdown-content">
                         <li><a href="koncerter.html">Koncerter</a></li>
                         <li><a href="konkurrencer.html">Konkurrencer</a></li>
@@ -47,64 +47,21 @@
         </nav>
     </header>
 
-    <!-- Hero sektion -->
+    <div class="gradient">
+        <div class="mobil-text">
+            <h3>Udfyld formularen og deltag</h3>
+            <p>Deltag i konkurrencen om 2 koncertbilletter. Alt du skal gøre er at udfylde formularen herunder, og holde
+                øje med din mail.</p>
+        </div>
 
-    <div class="hero">
-        <div class="hero-billede">
-            <img src="img/eb1mobil.png" alt="farverigt baggrundsbillede">
-        </div>
-        <div class="hero-billede-desktop">
-            <img src="/img/eb1desktop.png" alt="farverigt baggrundsbillede">
-        </div>
-        <div class="hero-text-2">
-            <h2 id="event-overskrift">Oplev musikken <br> - og deltag i konkurrencer</h2>
-            <p id="mobil-text-væk">Find din næste koncert eller deltag i konkurrencer om billetter. Rul ned og udforsk
-                mulighederne!</p>
-            <p class="desktop-text">Hos Radar har du mulighed for at opleve unikke koncerter og deltage i spændende
-                konkurrencer. Find din næste koncert eller deltag i konkurrencer om billetter. <br> Rul ned og udforsk
-                mulighederne!</p>
-        </div>
-    </div>
-
-    <!-- Midtersektion -->
-
-    <section class="mobil-text">
-        <div class="grid-container" id="container-margin">
-            <div class="content">
-                <h3>Koncerter</h3>
-                <p>Find kommende koncerter, oplev nye bands og få nogle fantastiske aftener!</p>
-            </div>
-            <div class="image">
-                <img src="img/eb2mobil.png" alt="billede af en koncert" class="koncert-billede">
-            </div>
-            <div class="content">
-                <a href="koncerter.html" class="cta-button" id="cta3">Se kommende koncerter</a>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Nederste sektion -->
-
-    <div class="hero">
-        <div class="hero-billede">
-            <img src="img/eb3mobil.png" alt="farverigt baggrundsbillede">
-        </div>
-        <div class="hero-billede-desktop">
-            <img src="/img/eb3desktop.png" alt="farverigt baggrundsbillede">
-        </div>
-        <div class="hero-text-2">
-            <h3>Konkurrencer</h3>
-            <p>Deltag i spændende konkurrencer og vind billetter til unikke oplevelser!</p>
-        </div>
-        <div class="ticket" id="ticket-mobil">
-            <img src="img/eb4mobil.png" alt="billede af en koncert">
-        </div>
-        <div>
-            <a href="konkurrencer.html" class="cta-button" id="cta4">Deltag i konkurrencer</a>
-        </div>
-    </div>
+        <section class="form-container">
+            <h6>Vær med i konkurrencen om 2 koncertbilletter</h6>
+            <form>
+                <input type="text" id="name" name="name" placeholder="Fornavn" required>
+                <input type="text" id="name" name="name" placeholder="Efternavn" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <button type="submit">Tilmeld</button>
+            </form>
     </div>
 
     <!-- Footer med information og sociale medier ikoner -->
