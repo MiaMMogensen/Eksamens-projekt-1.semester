@@ -56,3 +56,64 @@ document.addEventListener('DOMContentLoaded', () => {
     searchInput.addEventListener('input', filterEvents);
     filterSelect.addEventListener('change', filterEvents);
   });
+
+/* call to action knapper på koncert side */
+// Hent alle knapper med klassen "buy-ticket-computer"
+const buttons = document.querySelectorAll('.buy-ticket-computer');
+
+// Tilføj en click-eventlistener til hver knap
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Hent URL'en fra data-attribute
+        const url = button.getAttribute('data-url');
+        
+        // Åbn URL'en i en ny fane
+        if (url) {
+            window.open(url, '_blank');
+        } else {
+            console.error('URL mangler for denne knap');
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.more-info-computer');
+  buttons.forEach(button => {
+      button.addEventListener('click', () => {
+          const url = button.getAttribute('data-url');
+          if (url) {
+              window.open(url, '_blank');
+          } else {
+              console.error('URL mangler for denne knap');
+          }
+      });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.buy-ticket');
+  buttons.forEach(button => {
+      button.addEventListener('click', () => {
+          const url = button.getAttribute('data-url');
+          if (url) {
+              window.open(url, '_blank');
+          } else {
+              console.error('URL mangler for denne knap');
+          }
+      });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.more-info');
+  buttons.forEach(button => {
+      button.addEventListener('click', () => {
+          const url = button.getAttribute('data-url');
+          if (url) {
+              window.open(url, '_blank');
+          } else {
+              console.error('URL mangler for denne knap');
+          }
+      });
+  });
+});

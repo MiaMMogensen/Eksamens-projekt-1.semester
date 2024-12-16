@@ -11,11 +11,6 @@ body {
 
 /* Fonts */
 @font-face {
-    font-family: "Montserrat-Medium";
-    src: url(/fonts/Montserrat-Medium.ttf);
-}
-
-@font-face {
     font-family: "OpenSans-Regular";
     src: url(/fonts/OpenSans-Regular.ttf);
 }
@@ -464,8 +459,6 @@ header {
     opacity: 1;
 }
 
-
-
 /* styling af tekst */
 .mobil-text h2 {
     color: white;
@@ -713,7 +706,6 @@ header {
 }
 
 /* call to action knapper */
-
 .cta-button {
     padding: 15px;
     background-color: #FD0BB6;
@@ -910,9 +902,7 @@ input[type="text" i] {
     margin-top: 3rem;
 }
 
-
 /* media quaries */
-
 /* tablet */
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -972,12 +962,25 @@ input[type="text" i] {
         max-width: 500px;
     }
 
+    .hero-billede-desktop img {
+        display: block;
+    }
+
+    .hero-billede img {
+        display: none;
+    }
+
+    .hero-text-2 h3 {
+        margin: 0;
+    }
+
 }
 
 /* desktop */
 
 @media (min-width: 1025px) {
 
+    /* menu */
     .burger-menu {
         display: none;
     }
@@ -1020,6 +1023,7 @@ input[type="text" i] {
         display: block;
       }
 
+      /* forside */
       .hero-billede img {
         display: none;
     }
@@ -1048,6 +1052,7 @@ input[type="text" i] {
         left: 10%;
     }
 
+    /* tekst */
     .mobil-text h2 {
         font-size: 5rem;
     }
@@ -1070,6 +1075,8 @@ input[type="text" i] {
     .desktop-text {
         display: block;
     }
+
+    /* containere */
 
     .grid-container {
         display: grid;
@@ -1148,7 +1155,8 @@ input[type="text" i] {
         transform: translate(-50%, -50%);
         width: 300px;
     }
-    
+
+    /* footer */
     .footer-grid-container {
         display: grid;
         margin-bottom: 1rem;
@@ -1168,6 +1176,7 @@ input[type="text" i] {
         margin-top: 2rem;
     }
 
+    /* tekst */
     #event-overskrift {
         font-size: 5rem;
         margin-top: 13rem;
@@ -1354,47 +1363,45 @@ input[type="text" i] {
 
     .buy-ticket-computer {
         display: block;
-      }
+    }
 
-      .more-info-computer {
+    .more-info-computer {
         display: block;
-      }
+    }
 
-      .button-computer button {
+    .button-computer button {
         font-size: 2rem;
         width: 250px;
         margin-top: 2.5rem;
       }
 
-      .button-computer {
+    .button-computer {
         display: block;
         margin-left: auto;
         width: fit-content;
       }
 
-      .event-details {
+    .event-details {
         padding-left: 50px;
       }
 
-      .event-details-2 {
+    .event-details-2 {
         padding-left: 50px;
       }
 
-      .koncert-container {
+    .koncert-container {
         width: 80%;
       }
 
-
-
-      .fordele-desktop {
+    .fordele-desktop {
         display: block;
       }
 
-      .fordele-mobil {
+    .fordele-mobil {
         display: none;
       }
 
-      .frivillig-container {
+    .frivillig-container {
         margin-bottom: 3rem;
         display: grid;    
         justify-content: center;
@@ -1532,7 +1539,4 @@ input[type="text" i] {
     .større img {
         width: 470px;
     }
-
-    
-
 }
